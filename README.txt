@@ -69,12 +69,13 @@ text
 ##  **Instalacija i Pokretanje**
 
 ###  **Preduvjeti**
-- [XAMPP](https://www.apachefriends.org/) (Apache + MySQL + PHP)
-- Web preglednik (Chrome, Firefox, Edge)
+- [XAMPP](https://www.apachefriends.org/), start Apache
+- spremiti u /xampp/htdocs
+- učitati u Web preglednik (Chrome, Firefox, Edge)
 - Git (opcionalno)
 
 ###  **Koraci Instalacije**
 
-1. **Preuzmi projekat:**
+1. **Preuzmi projekt:**
    ```bash
    git clone https://github.com/modobasic/opg-tolic.git
