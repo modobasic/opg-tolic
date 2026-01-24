@@ -1,0 +1,2341 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 450;
+  background-color: #1a1a1a;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.logo .highlight {
+  color: gold;
+}
+
+.logo img { 
+	height: 75px; 
+	width: 90px; 
+	}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  letter-spacing: 2px; 
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: gold;
+}
+
+nav ul li a.active {
+  color: gold;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icons a {
+  position: relative;
+}
+
+.icons img {
+  height: 24px;
+  width: 24px;
+}
+
+#cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: gold;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: gold;
+  cursor: pointer;
+}
+
+.close-menu {
+  display: none; 
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-slideshow img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slideshow img.active {
+    opacity: 0.8;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75); 
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    font-weight: bold;
+	margin-top:7px;
+	margin-bottom: 20px;
+    letter-spacing: 4px;
+    animation: fadeInDown 1s ease-in-out;
+}
+.hero-text h3 {
+    font-size: 2rem;
+    font-weight: bold;
+	letter-spacing: 2px;
+    animation: fadeInDown 1s ease-in-out;
+    
+}
+.hero-text .highlight {
+    color: gold;
+}
+.hero-button {
+    display: inline-block;
+    padding: 14px 20px;
+    font-size: 23px;
+    font-weight: bold;
+    color: black;
+    background-color: rgba(255, 215, 0, 0.8); 
+    text-decoration: none;
+    border-radius: 20px; 
+    transition: all 0.3s ease-in-out;
+    text-shadow: 3px 1px 3px rgba(0, 0, 0, 0.4); 
+    position: relative;
+    font-family: 'Wonderful Future', sans-serif !important; 
+	letter-spacing: 2px;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+.hero-button:hover {
+    color: white;
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+    transform: translateY(5px);
+    }
+	
+.read-more {
+    display:inline-block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 30px;
+	font-size: 21px;
+}
+
+.read-more:hover {
+    color: gold;
+
+}
+.cart-icon {
+	margin-right: 70px;
+}
+
+.cart-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	margin-top: 50px; 
+    margin-bottom: 100px; 
+    flex-wrap: wrap;
+}
+
+
+.section img {
+    width: 50%; 
+    height: 650px; 
+    object-fit: cover; 
+    border-radius: 15px;
+    margin-right: 20px; 
+}
+
+.text {
+    width: 45%; 
+    padding: 0 20px;
+}
+
+.text h2 {
+    color: #d4af37; 
+    font-size: 53px;
+    margin-bottom: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.text h3 {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 350;
+}
+
+.text h4 {
+    font-size: 24px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+
+#products {
+    padding: 10px 20px;
+    text-align: center;
+}
+#products h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+	margin-top: 0px;
+	margin-bottom: 40px;
+}
+#products h2 {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+#products h3 {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#products p{
+    font-size: 21px;
+    color: white;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+.product {
+    background: rgba(255, 215, 0, 0.1);
+    border: 2.7px solid gold;
+    padding: 25px;
+    display: inline-block;
+    margin: 20px;
+    border-radius: 15px;
+    width: 260px;
+    height: 585px;
+    vertical-align: top;
+}
+
+.product img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.product h3 {
+    color: gold;
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+.buy-btn {
+    background-color: gold; 
+    color: black; 
+    font-size: 20px;
+    font-weight: bold; 
+    border: 2px solid gold; 
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+	margin-top: 10px;
+}
+
+.buy-btn:hover {
+    background-color: black; 
+    color: gold; 
+	transform: translateY(5px);
+}
+
+#contact {
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#contact h1 {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-bottom: 70px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 50px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.contact-info {
+    flex: 1;
+    background: linear-gradient(135deg, #000, #333);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	height: 600px !important;
+}
+
+.contact-info h2, .contact-form h2 {
+    font-size: 26px;
+    color: #FFD700;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.owner-image {
+	display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+	object-fit: cover;
+    margin-bottom: 25px !important;
+    transition: transform 0.3s ease;
+	margin-left: 400px !important;
+}
+
+.owner-image:hover {
+    transform: scale(1.05);
+}
+
+.info-text {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+	margin-bottom: 95px !important;
+}
+
+
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    margin-top: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.social-link {
+    color: #FFD700;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social-link img {
+    width: 40px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.social-link img:hover {
+    transform: scale(1.2);
+}
+
+
+ main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+		h2 {
+			font-size: 35px;
+			color: white;
+			margin-top: 100px;
+			margin-bottom: 30px;
+		}
+        .product-item {
+            display: flex;
+            align-items: center;
+			background: linear-gradient(135deg, #000, #333);
+			padding: 40px;
+            margin: 20px auto;
+            border: 2px solid gold;
+            width: 90%;
+            max-width: 1100px;
+            border-radius: 15px;
+            flex-wrap: wrap;
+        }
+        .product-item img {
+            width: 270px;
+            height: 270px;
+            margin-right: 30px;
+            border-radius: 10px;
+        }
+        .product-details {
+            text-align: left;
+            flex: 1;
+        }
+		.product-details h3 {
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 15px;
+			color: gold;
+			margin-left: 10px;
+        }
+        .product-details p {
+            margin-bottom: 25px !important;
+            line-height: 1.6;
+            font-size: 25px;
+			margin-left: 10px !important;
+			margin-right: 10px !important;
+			font-family: 'IBM Plex Sans', sans-serif;
+			font-weight: 350;
+        }
+        .price {
+            font-size: 30px !important;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+			margin-left: 10px !important;
+        }
+		
+      
+		.add-to-cart {
+			font-family: 'Inter', sans-serif;
+			font-weight: 520;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); 
+			background-color: gold;
+            color: black;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1.2em;
+            border-radius: 25px;
+
+        }
+		.add-to-cart:hover {
+			transform: translateY(5px); 
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 1); 
+}
+		
+#cart {
+    padding: 40px;
+    text-align: center;
+	margin-bottom: 150px;
+}
+
+#cart-items-container {
+    margin: 20px 0;
+}
+#cart h2 {
+	font-size: 45px;
+	color: gold;
+	margin-bottom: 90px;
+	margin-top: 120px;
+}
+#cart p{
+	margin-bottom: 50px;
+	font-size: 22px;
+}
+.cart-btn{
+	background-color: gold; 
+    color: #000000; 
+    border: 2px solid #000000; 
+    padding: 12px 24px; 
+    font-size: 22px; 
+    font-weight: 600; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+	margin-top: 50px;
+}
+
+.cart-btn:hover {
+    background-color: #b6952c; 
+    transform: translateY(5px); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: 140px 2fr 2fr 2fr auto;
+    align-items: center;
+    background-color: #333;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    gap: 40px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart-item-image {
+    width: 140px;
+    height: 140px;
+    border-radius: 10px;
+    object-fit: cover;
+	margin-right: 30px;
+}
+
+.cart-item-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-label {
+    font-size: 22px;
+    color: gold;
+    font-weight: bold;
+}
+
+.cart-item-name-text {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.cart-item-quantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cart-item-quantity-label {
+    font-size: 20px;
+    color: gold;
+    font-weight: bold;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-control button {
+    background-color: gold;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.quantity-control button:hover {
+    background-color: #ffd700;
+}
+
+.quantity-control .quantity {
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    min-width: 40px;
+    text-align: center;
+}
+
+.cart-item-price {
+    font-size: 26px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.remove-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.remove-btn:hover {
+    background-color: darkred;
+    transform: scale(1.05);
+}
+
+.remove-btn:active {
+    transform: scale(0.95);
+}
+
+#cart-total {
+    color: gold;
+    font-size: 2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.kvaliteta-cover {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    height: 75vh;
+    padding: 0 20px;
+    color: black;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.cover-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+	opacity: 0.9;
+}
+
+.cover-content {
+    z-index: 2;
+    position: relative;
+}
+
+.cover-content h1 {
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: fadeInDown 1s ease-in-out;
+    color: white;
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75); 
+	max-width: 700px;
+}
+
+
+#quality {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#quality h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffd700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+#quality p, .certifikati p, .medalje p {
+    font-size: 24px;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    text-align: justify;
+    text-justify: inter-word;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 350;
+}
+.uvod{
+	margin-bottom: 125px !important;
+}
+	
+.quality-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quality-content p {
+    flex: 1;
+    margin-right: 50px;
+    text-align: justify;
+	margin-left: 80px !important;
+    margin-right: 40px !important;
+	
+}
+
+.quality-image {
+    width: 50%; 
+    height: auto;
+    border-radius: 20px;
+    margin-left: 50px;
+	margin-right: 80px;
+}
+
+.certifikati {
+    margin: 50px auto;
+    max-width: 900px;
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+table {
+    width: 100%;
+    margin: 30px 0;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #000, #333);
+    border-radius: 5px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+th, td {
+    border: 3px solid rgba(255, 215, 0, 0.5);
+    padding: 14px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+}
+
+th {
+    background: linear-gradient(135deg, #ffd700, #ffcc00);
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.medalje {
+    padding: 50px 20px;
+    margin: 50px 300px;
+}
+
+.medalje h2 {
+    font-size: 36px;
+    color: #ffd700;
+    text-align: center;
+}
+
+.medalje h4 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.medalje-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 35px;
+}
+
+.medalja {
+    background: linear-gradient(135deg, #000, #333);
+    padding: 20px;
+    border-radius: 12px;
+    width: 220px;
+    text-align: left;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 215, 0, 0.4);
+}
+
+.medalja:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+}
+
+.medalja h3 {
+    font-size: 22px;
+    color: #ffd700;
+    margin-bottom: 12px;
+    text-align: center !important;
+}
+
+.medal-icon {
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin: 10px 5px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.her-section {
+    position: relative;
+    text-align: center;
+    color: gold;
+}
+
+.her-image {
+    width: 100%;
+    height: 75vh;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.her-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 2px 2px 10px black;
+}
+.her-text h1{
+	 font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    animation: fadeInDown 1s ease-in-out;
+    color: white;
+	text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.75); 
+	max-width: 700px;
+}
+
+.her-text p{
+	font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 500;
+	color: white;
+	font-size: 25px;
+}
+
+.contennt {
+    max-width: 1700px;
+    margin: 50px auto;
+    padding: 20px;
+	font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+	font-size: 22px;
+	margin-top: 50px !important;
+	margin-bottom: 50px;
+}
+
+.image-text {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 50px;
+	
+}
+
+.image-text img {
+    width: 50%;
+    border-radius: 10px;
+    object-fit: cover;
+	margin-right: 50px;
+	margin-bottom: 80px;
+	max-height: 750px;
+}
+
+.image-text.reverse img {
+	margin-left: 53px;
+	margin-bottom: 50px;
+	max-height: 750px;
+}
+
+.image-text:first-of-type {
+    flex-direction: row;
+}
+
+.image-text.reverse {
+    flex-direction: row-reverse;
+}
+
+.intro-section {
+    text-align: center;
+	font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 400;
+	margin-bottom: 100px !important;
+}
+
+.intro-section .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white; 
+}
+
+.intro-section h2 {
+    color: #d4af37; 
+    font-size: 53px;
+    margin-bottom: 30px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+.intro-section .intro-content p {
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-weight: 350;
+    color: white; 
+}
+.search-container {
+    position: absolute;
+    top: 100%;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 2px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    z-index: 101;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   
+}
+
+.search-container input {
+    padding: 10px 15px;
+    border: 2px solid gold;
+    border-radius: 25px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    width: 250px;
+    margin-right: 10px;
+	margin-left: 10px;
+}
+
+.search-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+	margin-right: 20px;
+}
+
+.search-container button img {
+    width: 25px;
+    height: 25px;
+}
+
+.close-search {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.close-search:hover {
+    color: gold;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 101;
+    max-height: 70vh;
+    overflow-y: auto;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.search-result-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-result-item:hover {
+    background-color: #222;
+}
+
+.search-result-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+    border: 1px solid gold;
+}
+
+.search-result-item h3 {
+    color: gold;
+    margin: 0 0 5px 0;
+    font-size: 18px;
+}
+
+.search-result-item p {
+    color: #ccc;
+    margin: 0;
+    font-size: 16px;
+}
+
+.no-results {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+.no-results a {
+    color: gold;
+    text-decoration: none;
+}
+
+.no-results a:hover {
+    text-decoration: underline;
+}
+
+.product-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.favorite-icon {
+  display: inline-block;
+  width: 26px !important;
+  height: 26px !important;
+  object-fit: contain;
+  display: flex;
+  margin-left: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.favorite-icon:hover {
+  transform: scale(1.2);
+}
+
+.favorite-icon.active {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(7466%) hue-rotate(359deg) brightness(101%) contrast(112%);
+}
+
+
+.favorit-icon {
+  display: inline-block;
+  width: 34px !important;
+  height: 34px !important;
+  margin-left: 30px;
+  object-fit: contain;
+  display: flex;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.favorit-icon:hover {
+  transform: scale(1.2);
+}
+.favorit-icon.active {
+  filter: brightness(0) saturate(100%) invert(18%) sepia(98%) saturate(7466%) hue-rotate(359deg) brightness(101%) contrast(112%);
+}
+.product-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.product-title-wrapper h3 {
+  margin: 0;
+  display: inline-block;
+}
+
+.favorites-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 30px;
+  max-width: 1200px;
+  margin-bottom: 60px;
+}
+
+.favorite-item {
+  background: rgba(255, 215, 0, 0.1);
+  border: 2px solid gold;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.favorite-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.favorite-item h3 {
+  color: gold;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.favorite-item .price {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.favorite-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.favorite-actions img{
+	display: inline-block;
+  width: 36px !important;
+  height: 36px !important;
+  object-fit: contain;
+  display: flex;
+  margin-right: 30px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 10px;
+}
+.no-favorites {
+	display: flex;
+  padding: 135px;
+  font-size: 37px;
+  gap: 155px;
+
+}
+
+.no-favorites a {
+  color: gold;
+  text-decoration: none;
+}
+
+.no-favorites a:hover {
+  text-decoration: underline;
+}
+.favorites-title {
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.buy-bttn {
+    background-color: gold; 
+    color: black; 
+    font-size: 20px; 
+    font-weight: bold; 
+    border: 2px solid gold;
+    border-radius: 25px; 
+    padding: 10px 20px; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+	margin-left: 30px;
+}
+
+.buy-bttn:hover {
+   background-color: black; 
+    color: gold; 
+	transform: translateY(5px);
+}
+#favorite-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: gold;
+  color: black;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  nav.show {
+    display: flex;
+    transform: translateX(0);
+  }
+
+  .close-menu {
+    display: block; 
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  nav ul li {
+    margin: 0;
+    text-align: center;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .icons {
+    order: 1;
+    margin-left: auto;
+    margin-right: 1px;
+  }
+
+  .logo {
+    order: 0;
+  }
+
+  .menu-icon {
+    order: 2;
+  }
+   .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section img {
+        width: 80%; 
+        margin-bottom: 20px;
+        height: auto; 
+    }
+
+    .text {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .text h2 {
+        font-size: 30px;
+    }
+
+    .text h3, .text h4 {
+        font-size: 18px;
+    }
+	 #contact {
+        padding: 20px; 
+    }
+
+    #contact h1 {
+        font-size: 30px; 
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .contact-container {
+        flex-direction: column; 
+        gap: 20px; 
+    }
+
+    .contact-info, .contact-form {
+        height: auto !important; 
+        padding: 20px; 
+    }
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .contact-info h2, .contact-form h2 {
+        font-size: 22px; 
+        margin-bottom: 20px;
+    }
+
+    .owner-image {
+        width: 150px; 
+        height: 150px;
+        margin-left: 0 !important; 
+        margin-bottom: 15px !important; 
+    }
+
+    .info-text {
+        font-size: 16px; 
+        margin-bottom: 20px !important; 
+        line-height: 1.5; 
+    }
+
+    .contact-form label {
+        font-size: 16px; 
+    }
+
+    .contact-form input, .contact-form textarea {
+        padding: 10px; 
+        font-size: 16px; 
+        margin-bottom: 10px; 
+    }
+
+    .contact-form button {
+        font-size: 18px; 
+        padding: 12px 20px;
+        margin-bottom: 20px !important; 
+    }
+	 .contact-container {
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-info {
+        max-width: 90%;
+    }
+
+    .owner-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .contact-form {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+	 .product-item {
+                flex-direction: column;
+                text-align: center;
+            }
+            .product-item img {
+                margin: 0 0 15px 0;
+            }
+            .product-details {
+                text-align: center;
+            }
+	.cart-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+        padding: 25px;
+    }
+
+    .cart-item-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cart-item-name-text {
+        font-size: 24px;
+    }
+
+    .cart-item-quantity {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .quantity-control {
+        gap: 2px;
+    }
+
+    .quantity-control button {
+        padding: 8px 16px;
+        font-size: 20px;
+    }
+
+    .quantity-control .quantity {
+        font-size: 22px;
+    }
+
+    .cart-item-price {
+        font-size: 22px;
+    }
+
+    .remove-btn {
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+	 .kvaliteta-cover {
+        height: 300px; 
+    }
+
+    .cover-content h1 {
+        font-size: 36px; 
+    }
+
+    .cover-background {
+        height: 100%; 
+    }
+	.quality-image {
+        width: 100%; 
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 10px; 
+    }
+
+    .quality-content {
+        padding: 0 10px; 
+    }
+
+    .quality-content p {
+        margin-left: 0 !important; 
+        margin-right: 0 !important;
+        text-align: center; 
+    }
+	#quality {
+        padding: 20px 10px; 
+    }
+
+    #quality h2 {
+        font-size: 28px; 
+        margin-bottom: 30px;
+    }
+
+    #quality p, .certifikati p, .medalje p {
+        font-size: 18px; 
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .uvod {
+        margin-bottom: 60px !important; 
+    }
+
+    .quality-content {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .quality-content p {
+        margin-left: 20px !important; 
+        margin-right: 20px !important;
+        margin-bottom: 30px; 
+        text-align: center; 
+    }
+
+    .quality-image {
+        width: 80%; 
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 30px; 
+    }
+    .certifikati {
+        padding: 20px;
+    }
+
+    table {
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    th {
+        font-size: 16px;
+    }
+    .medalje {
+        padding: 20px;
+        margin: 20px 0;
+    }
+
+    .medalje h2 {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .medalje-container {
+        gap: 15px;
+    }
+
+    .medalja {
+        width: 100%;
+        max-width: 300px;
+        padding: 15px;
+    }
+
+    .medalja h3 {
+        font-size: 20px;
+    }
+
+    .medalja p {
+        font-size: 16px;
+    }
+
+    .medal-icon {
+        width: 30px;
+        height: 30px;
+        margin: 5px;
+    }
+.image-text,
+.image-text.reverse {
+    display: block; 
+    text-align: center;
+    margin-bottom: 20px; 
+}
+
+.image-text img,
+.image-text.reverse img {
+    width: 100%; 
+    max-width: 380px; 
+    border-radius: 15px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /
+	
+}
+.image-text img{
+	margin-left: 50px !important;
+}
+.image-text .text,
+.image-text.reverse .text {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.image-text .text h2,
+.image-text.reverse .text h2 {
+    font-size: 28px; 
+    margin-bottom: 15px;
+  
+}
+
+.image-text .text h3,
+.image-text.reverse .text h3 {
+    font-size: 21px;
+    line-height: 1.6; 
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px !important; 
+    padding: 0 20px; 
+}
+
+.intro-section .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: white;
+}
+
+.intro-section .intro-content p {
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: white;
+}
+ .favorites-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .favorite-item {
+    padding: 15px;
+    border-width: 1px;
+  }
+
+  .favorite-item img {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 10px;
+  }
+
+  .favorite-item h3 {
+    font-size: 20px;
+  }
+
+  .favorite-item .price {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .favorite-actions {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .favorite-actions img {
+    width: 32px !important;
+    height: 32px !important;
+    margin-right: 0;
+    margin-top: 5px;
+  }
+
+  .no-favorites {
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    font-size: 24px;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .favorites-title {
+    font-size: 32px;
+    margin-top: 100px !important;
+    margin-bottom: 30px;
+  }
+
+  .buy-bttn {
+    font-size: 18px;
+    padding: 8px 16px;
+    margin-left: 0;
+    width: 80%;
+    max-width: 250px;
+  }
+
+  #favorite-count {
+    top: -8px;
+    right: -8px;
+    padding: 1px 5px;
+  }
+
+
+  .favorites-container {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .favorite-item img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .favorite-item h3 {
+    font-size: 18px;
+  }
+
+  .no-favorites {
+    padding: 125px 35px;
+    font-size: 20px;
+    gap: 20px;
+  }
+
+  .favorites-title {
+    font-size: 28px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .buy-bttn {
+    font-size: 16px;
+  }  
+ }
+  
+
+
+/* styles.css - Dodatak za PHP dijelove */
+
+/* Login i Register forme */
+.login-container, .register-container {
+    max-width: 600px;
+    margin: 150px auto 100px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid gold;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.login-container h1, .register-container h1 {
+    font-size: 2.5rem;
+    color: gold;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.login-container::before, .register-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+}
+
+.error {
+    color: #ff3333;
+    background-color: rgba(255, 51, 51, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff3333;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+    animation: shake 0.5s;
+    font-size: 1.1rem;
+}
+
+.success {
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: gold;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group input[type="email"],
+.form-group input[type="number"],
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid rgba(255, 215, 0, 0.7);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all 0.3s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Inter', sans-serif;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="password"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="number"]:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.error-text {
+    color: #ff3333;
+    font-size: 0.9rem;
+    margin-top: 5px;
+    display: block;
+}
+
+.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, gold, #ffcc00);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffcc00, gold);
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    color: #1a1a1a;
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+.login-container > p,
+.register-container > p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #f8f8f8;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.login-container a,
+.register-container a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.login-container a:hover,
+.register-container a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.login-container a::after,
+.register-container a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: gold;
+    transition: width 0.3s;
+}
+
+.login-container a:hover::after,
+.register-container a:hover::after {
+    width: 100%;
+}
+
+/* Profil korisnika */
+.profile-title {
+    font-size: 2.5rem;
+    color: gold;
+    text-align: center;
+    margin: 120px 0 50px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.profile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+    padding: 0 20px;
+}
+
+.profile-info {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid gold;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+}
+
+.profile-info h2 {
+    color: gold;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.5);
+    padding-bottom: 10px;
+}
+
+.profile-info h3 {
+    color: gold;
+    font-size: 1.4rem;
+    margin: 30px 0 20px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+th {
+    background: linear-gradient(135deg, gold, #ffcc00);
+    color: #1a1a1a;
+    padding: 12px;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+tr:hover td {
+    background-color: rgba(255, 215, 0, 0.1);
+}
+
+tfoot td {
+    font-weight: bold;
+    color: gold;
+    border-top: 2px solid gold;
+}
+
+.back-link {
+    display: inline-block;
+    color: gold;
+    text-decoration: none;
+    font-family: 'IBM Plex Sans', sans-serif;
+    margin: 30px 0 100px;
+    padding: 10px 20px;
+    border: 1px solid gold;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.back-link:hover {
+    background-color: gold;
+    color: #1a1a1a;
+    transform: translateX(-5px);
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+    .login-container, .register-container {
+        margin: 100px 20px;
+        padding: 30px;
+    }
+    
+    .profile-container, .order-details-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .profile-info, .orders-history, .order-info, .order-items {
+        min-width: 100%;
+    }
+    
+    .info-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Forgot Password Container */
+.password-container {
+    max-width: 600px;
+    margin: 150px auto 100px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid gold;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 0.6s ease-out forwards;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.password-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, gold, #ffcc00, gold);
+}
+
+.password-container h1 {
+    font-size: 2.5rem;
+    color: gold;
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.password-container .error {
+    color: #ff3333;
+    background-color: rgba(255, 51, 51, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff3333;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+    animation: shake 0.5s;
+    font-size: 1.1rem;
+}
+
+.password-container .success {
+    color: #4CAF50;
+    background-color: rgba(76, 175, 80, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #4CAF50;
+    margin-bottom: 25px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.password-container .form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.password-container .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: gold;
+    font-weight: bold;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.password-container .form-group input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    border: 2px solid rgba(255, 215, 0, 0.7);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    transition: all 0.3s;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Inter', sans-serif;
+}
+
+.password-container .form-group input[type="email"]:focus {
+    outline: none;
+    border-color: gold;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+}
+
+.password-container .btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, gold, #ffcc00);
+    color: #1a1a1a;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    font-family: 'IBM Plex Sans', sans-serif;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.password-container .btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ffcc00, gold);
+    transition: all 0.4s;
+    z-index: -1;
+}
+
+.password-container .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+    color: #1a1a1a;
+}
+
+.password-container .btn:hover::before {
+    left: 0;
+}
+
+.password-container > p {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 1.1rem;
+    color: #f8f8f8;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.password-container a {
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    position: relative;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.password-container a:hover {
+    color: #ffcc00;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.password-container a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: gold;
+    transition: width 0.3s;
+}
+
+.password-container a:hover::after {
+    width: 100%;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .password-container {
+        margin: 100px 20px;
+        padding: 30px;
+    }
+    
+    .password-container h1 {
+        font-size: 2rem;
+    }
+    
+    .password-container .btn {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+
+/* Animacije */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+}
+
+/* Varijable */
+:root {
+    --primary-color: #ffa500;
+    --secondary-color: #8B4513;
+    --accent-color: #ffd700;
+    --error-color: #ff3333;
+    --dark-color: #333;
+    --light-color: #f8f8f8;
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+

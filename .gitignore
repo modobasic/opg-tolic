@@ -1,0 +1,24 @@
+# PHP
+vendor/
+composer.lock
+.env
+*.log
+
+# Sistem
+.DS_Store
+Thumbs.db
+
+# Server
+.htaccess
+
+# XAMPP/Development
+xampp/
+tmp/
+
+# Baza podataka 
+*.sql
+*.db
+
+# IDE
+.vscode/
+.idea/
