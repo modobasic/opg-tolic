@@ -45,8 +45,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `first_name`, `last_name`, `address`, `city`, `postal_code`, `country`, `phone`, `created_at`, `updated_at`) VALUES
-(1, 'mare59', 'marija.odobasic5@gmail.com', '$2y$10$hUakPMNa.0x4mAy2Wp.ZpO3m2UuGTa1e73xRxmWzTzeV4RXWUJDzq', 'Marija', 'Odobašić', 'Josipa Bašića 20', 'Slavonski Brod', '35000', 'Hrvatska', '0994426178', '2025-06-21 17:15:02', '2025-06-22 13:23:05'),
-(2, 'josa', 'josipa.odobasic@gmail.com', '$2y$10$9.4Mg9RGc9mP1.3MkaOwJe0kDLQCbk98GhAOrdFzgaO/gRfkIpIHK', 'Marija', 'Odobašić', 'Josipa Bašića 20', 'Slavonski Brod', '35000', 'Hrvatska', '0914000322', '2025-06-22 16:45:57', '2025-06-22 16:45:57');
+('testuser1','test1@example.com','$2y$10$abcdefghijklmnopqrstuv','Ime','Prezime','Test ulica 1','Zagreb','10000','Hrvatska','+385900000001');
 
 --
 -- Indexes for dumped tables
